@@ -48,3 +48,7 @@ html {
 
 ### section3
 * 스크롤 되면서 이미지가 커짐
+
+## JS
+1. 한 섹션의 height를 window innerHeight의 다섯배로 설정
+2. yOffset 과 prevScrollHeight, currentHeight를 이용해서 스크롤을 내릴때와 올릴때 함수 구현
