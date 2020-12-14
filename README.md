@@ -59,3 +59,6 @@ html {
 
 ## scrollLoop 함수를 setLayout에도 세팅
 * 스크롤루프는 스크롤 이동시에만 body에 id를 생성, 때문에 새로고침 혹은 화면이 처음 로드될 때에도 body id 를 생성하기 위해서 setLayout 함수에도 현재 스크롤 페이지를 세팅
+
+## 각 section 안에서의 scroll 값
+* 전제 pageYoffset 값에서 preScrollHeight 값을 빼줌
