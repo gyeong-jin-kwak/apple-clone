@@ -52,3 +52,10 @@ html {
 ## JS
 1. 한 섹션의 height를 window innerHeight의 다섯배로 설정
 2. yOffset 과 prevScrollHeight, currentHeight를 이용해서 스크롤을 내릴때와 올릴때 함수 구현
+
+## event 'load' vs 'DOMContentLoaded'
+* **load**는 이미지, 영상 등 모두 로드 된 후에 스크립트가 실행되지만 **DOMContentedLoaded**는 html 태그들만 load한 후 실행. 따라서 **DOMContentLoaded** 의 로드 속도가 더 빠름 현재 실습에서는 이미지, 동영상의 역할이 중요하기에 **load** 이벤트를 실행
+
+
+## scrollLoop 함수를 setLayout에도 세팅
+* 스크롤루프는 스크롤 이동시에만 body에 id를 생성, 때문에 새로고침 혹은 화면이 처음 로드될 때에도 body id 를 생성하기 위해서 setLayout 함수에도 현재 스크롤 페이지를 세팅
