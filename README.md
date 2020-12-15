@@ -62,3 +62,25 @@ html {
 
 ## 각 section 안에서의 scroll 값
 * 전제 pageYoffset 값에서 preScrollHeight 값을 빼줌
+
+```
+* 전체 세로 스크롤 = window.pageYOffseg (let yOffset);
+
+* 각 section의 height를 5배로 늘려줌 ( scrollHeight )
+  * scrollHeight = heightNum(5) * window.innerHeight;
+
+* 현재 페이지 section 에 id를 설정 ** scrollLoop(), setLayout() **
+  * preScrollHeight += sceneInfo[i].scrollHeight; ( for문 )
+  * yOffset 과 preScrollHeight( sceneInfo의 height ) 를 비교해서 현재 section num 변경
+  * document.body.setAttribute('id', `show-scene-${currentScene}`);
+
+* 현재 페이지 안에서의 yOffset 설정 ( const currentYOsset, playAnimation() )
+  * yOffset(전체) - preScrollHeight(이전 section들의 height 합)
+
+* css 값 범위 설정을 위한 한 섹션 안에서의 비율을 설정 ( let scrollRatio, calcValues() )
+  * 비율 = currentYOffset(전체 - 이전 section들 높이의 합) / 현재 section의 높이
+  * 설정된 범위 값 안에서 움직이도록 하려면 '설정 끝값 - 설정 시작값 = 범위'
+  * 시작 설정값을 맞춰야 하므로 '범위 + 설정 시작값'
+  
+* 한 section 안에서 요소들이 순서대로 보여지고 사라지는 값
+```
