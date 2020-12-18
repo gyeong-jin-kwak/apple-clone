@@ -81,6 +81,7 @@ a {
 
 .main-message {
   display: flex;
+  top: 35vh;
   height: 3em;
   margin: 5px 0;
   align-items: center;
@@ -164,7 +165,6 @@ a {
 .sticky-elem {
   position: fixed;
   display: none;
-  top: 0;
   left: 0;
   width: 100%;
 }

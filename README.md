@@ -87,4 +87,5 @@ html {
   * ratio 반영 방법은 같으나 ratio가 적용되는 비율은 위에 선언된 값으로 대체
   * ** 비율은 전체분에 기준점에서 스크롤 된 값 **
 ```
-![개념설명](./img_readme/picture.jpg)
+![등장 애니메이션](./img_readme/picture.jpg)
+![사라지는 애니메이션](./img_readme/picture2.jpg)
