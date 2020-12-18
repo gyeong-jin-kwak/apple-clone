@@ -63,6 +63,10 @@ html {
 ## 각 section 안에서의 scroll 값
 * 전제 pageYoffset 값에서 preScrollHeight 값을 빼줌
 
+## translate3d
+* 하드웨어 가속이 보장되기 때문에 퍼포먼스가 좋음
+
+
 ```
 * 전체 세로 스크롤 = window.pageYOffseg (let yOffset);
 
