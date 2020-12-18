@@ -87,4 +87,4 @@ html {
   * ratio 반영 방법은 같으나 ratio가 적용되는 비율은 위에 선언된 값으로 대체
   * ** 비율은 전체분에 기준점에서 스크롤 된 값 **
 ```
-![개념설명](https://d2ufj6gm1gtdrc.cloudfront.net/2020/12/18/11/24/3be63382bac5ea3afee8aeed013c4f0a.jpeg?w=1200&q=90)
+![개념설명](./img_readme/picture.jpg)
