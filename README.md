@@ -93,3 +93,30 @@ html {
 ```
 ![등장 애니메이션](./img_readme/picture.jpg)
 ![사라지는 애니메이션](./img_readme/picture2.jpg)
+
+## 비디오 제어
+
+### 비디어로 제어하기
+* 이렇게 비디오 제어할 시에 비디오 용량이 낮아지면 부드러운 이벤트 처리가 가능하지만 화질이 떨어지고 고해상도 비디오를 사용할 시 이미지가 깨지지는 않지만 이벤트 처리가 부드럽지 못함.
+* loadeddata, canplaythrough
+  * 공통점은 둘다 비디오 로드를 끝낸 후에 비디오 적용
+  * canplaythrough 는 비디오 길이를 조절하면 계속 새로 고침 되고 loadeddata는 한번 비디오가 로드 되면 이후 실행
+* duration 
+  * 비디오의 전체 재생 시간을 가지고 있는 속성
+* 스크롤 가동 범위는 끝까지 스크롤 했을때 더는 스크롤 할 필요가 없음으로 window.innerheight를 빼줌
+* currentTime 비디오 관련 개발에서 currentTime 을 control 할 일이 있음
+
+### 이미지 처리로 제어하기 (애플 채택 방식)
+* 동영상을 프레임별로 이미지를 수백장을 생성하여 사용
+* 애플에서도 이 방식을 사용
+* 이미지 개수로 조정함 (ex_ let totalImageCount)
+* 용량이 굉장히 크지만 부드러운 스크롤 처리까지 가능하다.
+* 동영상 프레임 추출
+* 이미지 압축 툴로 용량 최적화 시켜주고 사용
+
+### canvas 사용 방법 (애플 채택 방식)
+* canvas를 사용할 때에는 getContext를 사용
+
+## 새로운 객체 생성
+imgElem = new Image(); 
+document.createElement('img');
