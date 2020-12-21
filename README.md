@@ -116,7 +116,13 @@ html {
 
 ### canvas 사용 방법 (애플 채택 방식)
 * canvas를 사용할 때에는 getContext를 사용
+* canvas 사이즈는 이미지 사이즈로 fix 해놓고 css transform scale 로 크기 조정(성능이 좋고 간단한 방법)
 
 ## 새로운 객체 생성
-imgElem = new Image(); 
-document.createElement('img');
+* imgElem = new Image(); 
+* document.createElement('img');
+
+## canvas 사이즈 window.innerHeight랑 맞추는 작업
+* window.innerHeight / 1080(본래 지정해두었던 canvans height) -> height 가 알맞게 들어감
+* transform scale을 사용, top:0 속성이 있어도 scale 은 다른 요소에 영향을 받지 않기 때문에 붙지 않는다. 
+  * 해결방법: top: 50%, height: 50%, transfrom: translate3d(-50%, -50%, 0)
