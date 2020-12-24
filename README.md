@@ -127,6 +127,6 @@ html {
 * transform scale을 사용, top:0 속성이 있어도 scale 은 다른 요소에 영향을 받지 않기 때문에 붙지 않는다. 
   * 해결방법: top: 50%, height: 50%, transfrom: translate3d(-50%, -50%, 0)
 
-  ## canvas draw
-  * 세로를 window와 inner와 맞출지 가로를 맞출지 선택 (playAnimation() ,setCanvasImages())
-  * 이미지 객체를 생성해서 src 넣어줌
+## canvas draw
+* 세로를 window와 inner와 맞출지 가로를 맞출지 선택 (playAnimation() ,setCanvasImages())
+* 이미지 객체를 생성해서 src 넣어줌
