@@ -130,3 +130,7 @@ html {
 ## canvas draw
 * 세로를 window와 inner와 맞출지 가로를 맞출지 선택 (playAnimation() ,setCanvasImages())
 * 이미지 객체를 생성해서 src 넣어줌
+
+## 점점 넓어지는 canvas 이미지
+* `fillRect()` 는 canvas 사각형을 그려주는 함수
+![canvas 양쪽 white 사각형 계산](./img_readme/picture3.jpg)
