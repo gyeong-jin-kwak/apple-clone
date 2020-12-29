@@ -134,3 +134,6 @@ html {
 ## 점점 넓어지는 canvas 이미지
 * `fillRect()` 는 canvas 사각형을 그려주는 함수
 ![canvas 양쪽 white 사각형 계산](./img_readme/picture3.jpg)
+
+## getBoundingClientRect()
+* canvas 의 position 과 크기 정보를 가지고 있음

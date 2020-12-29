@@ -72,6 +72,7 @@ a {
 }
 
 .scroll-section {
+  position: relative;
   padding-top: 50vh;
 }
 
@@ -208,9 +209,9 @@ a {
   align-items: center;
 }
 
-.image-blend-canvas {
+/* .image-blend-canvas {
   background: blue;
-}
+} */
 
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {
