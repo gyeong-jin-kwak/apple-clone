@@ -362,6 +362,8 @@
 
       case 3:
         // console.log('3 play')
+        let step = 0;
+
         //  가로 세로 꽉 차게 세팅(계산 필요)
         const widthRatio = window.innerWidth / objs.canvas.width;
         const heightRatio = window.innerHeight / objs.canvas.height;
@@ -421,6 +423,20 @@
           parseInt(whiteRectWidth),
           objs.canvas.height
         );
+
+        // 캔버스가 브라우저의 끝에 닿기 전 = step1
+        if( scrollRatio < values.rect1X[2].end){
+          step = 1;
+          console.log('캔버스 닿기 전');
+          objs.canvas.classList.remove('sticky');
+        } else {
+          // 이미지 블렌드
+          step = 2;
+          console.log('캔버스 닿은 후');
+          objs.canvas.classList.add('sticky');
+          objs.canvas.style.top = `${-(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2}px`
+        }
+
         break;
     }
   }

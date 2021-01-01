@@ -209,9 +209,10 @@ a {
   align-items: center;
 }
 
-/* .image-blend-canvas {
-  background: blue;
-} */
+.image-blend-canvas.sticky {
+  position: fixed;
+  top: 0;
+}
 
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {
