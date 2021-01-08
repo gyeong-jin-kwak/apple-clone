@@ -140,6 +140,7 @@ html {
 
 ## 감속이 되는 비디오 효과
 ```
+let acc = 0.1;
 let delayedYOffset = 0;
 let rafId;
 let rafState;
@@ -155,7 +156,7 @@ function loop() {
   delayedYOffset = delayedYOffset + (pageYOffset - delayedYOffset) * acc;
   rafId = requestAnimationFrame(loop);
   if(Math.abs(pageYOffset - delayedYOffset) < 1) {
-    cancleAnimationFrame(rafId);
+    cancelAnimationFrame(rafId);
     rafState = false;
   }
 }
