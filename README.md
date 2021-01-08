@@ -137,3 +137,27 @@ html {
 
 ## getBoundingClientRect()
 * canvas 의 position 과 크기 정보를 가지고 있음
+
+## 감속이 되는 비디오 효과
+```
+let delayedYOffset = 0;
+let rafId;
+let rafState;
+
+window.addEventListner('scroll', ()=>{
+  if(!rafState){
+    rafId = requestAnimationFrame(loop);
+    rafState = true;
+  }
+})
+
+function loop() {
+  delayedYOffset = delayedYOffset + (pageYOffset - delayedYOffset) * acc;
+  rafId = requestAnimationFrame(loop);
+  if(Math.abs(pageYOffset - delayedYOffset) < 1) {
+    cancleAnimationFrame(rafId);
+    rafState = false;
+  }
+}
+loop()
+```
