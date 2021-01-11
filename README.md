@@ -162,3 +162,7 @@ function loop() {
 }
 loop()
 ```
+
+## svg loading
+* `stroke-dasharray`
+* `document.querySelector('.loading-circle circle').getTotalLength()`
