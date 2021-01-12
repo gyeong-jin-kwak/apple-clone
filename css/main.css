@@ -257,6 +257,10 @@ a {
   stroke-dashoffset: -157;
 } */
 
+body.before-load {
+  overflow: hidden;
+}
+
 .before-load .loading {
   opacity: 1;
 }
