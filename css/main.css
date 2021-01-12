@@ -223,6 +223,10 @@ a {
   will-change: transform, opacity;
 }
 
+.scroll-effect-end .sticky-elem {
+  display: none !important;
+}
+
 #scroll-section-3 {
   display: flex;
   flex-direction: column;
@@ -287,6 +291,14 @@ body.before-load {
 
 @keyframes loading-spin {
   100% { transform: rotate(360deg); }
+}
+
+.normal-content {
+  margin-bottom: 10rem;
+}
+
+.normal-content .mid-message{
+  font-size: 1.2rem;
 }
 
 @media (min-width: 1024px) {
