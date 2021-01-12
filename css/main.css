@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.before-load .conainer {
+  display: none;
+}
+
 /* 모바일에서 가로 스크롤 방지 */
 .container {
   overflow-x: hidden;
