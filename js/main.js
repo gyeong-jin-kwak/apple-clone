@@ -551,6 +551,20 @@
     setLayout();
     sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
 
+    let tempYOffset = yOffset;
+    let tempScrollCount = 0;
+    if (yOffset > 0 ) {
+      let siId = setInterval(() => {
+        scrollTo(0, tempYOffset);
+        tempYOffset += 5;
+        tempScrollCount++;
+  
+        if (tempScrollCount > 20) {
+          clearInterval (siId)
+        }
+      }, 20);
+    }
+
     window.addEventListener('scroll', () => {
       yOffset = window.pageYOffset;
       scrollLoop();
@@ -564,13 +578,17 @@
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
-        setLayout();
-        sceneInfo[3].values.rectStartY = 0;
+        window.location.reload();
+        // setLayout();
+        // sceneInfo[3].values.rectStartY = 0;
       }
     });
 
     window.addEventListener('orientationchange', () => {
-      setTimeout(setLayout, 500);
+      scrollTo(0, 0);
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     });
 
 
